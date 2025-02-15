@@ -3,21 +3,21 @@ import os, platform, socket, psutil
 
 app = Flask(__name__)
 
-HTML_TEMPLATE = """
+HTML_TEMPLATE = """  
 <!DOCTYPE html>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Info about 9031901 (raphael)</title>
+    <title>System Info</title>
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: consolas;
+            font-family: monospace;
             display: flex;
             justify-content: center;
-            align-items: center;
+          align-items: center;
             height: 100vh;
             margin: 0;
             overflow: hidden;
@@ -36,7 +36,9 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class='container'>
-        <pre>{{ info }}</pre>
+        {% for key, value in info.items() %}
+            <p><strong>{{ key }}:</strong> {{ value }}</p>
+        {% endfor %}
     </div>
 </body>
 </html>
@@ -47,7 +49,7 @@ def system_info():
     info = {
         "username": "raphael00",
         "id": "9031901",
-        "name": "Raphael",
+        "name": "Unknown",
         "system": platform.system(),
         "version": platform.version(),
         "architecture": platform.architecture(),
@@ -64,3 +66,4 @@ def system_info():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
