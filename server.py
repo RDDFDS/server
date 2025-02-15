@@ -14,17 +14,23 @@ HTML_TEMPLATE = """
         body {
             background-color: black;
             color: white;
-            font-family: monospace;
+            font-family: consolas;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
         .container {
             border: 2px solid white;
-            padding: 20px;
+            padding: 10px;
             text-align: left;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
 </head>
