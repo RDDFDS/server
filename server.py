@@ -9,7 +9,7 @@ HTML_TEMPLATE = """
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>System Info</title>
+    <title>Info about 9031901 (raphael)</title>
     <style>
         body {
             background-color: black;
@@ -47,7 +47,7 @@ def system_info():
     info = {
         "username": "raphael00",
         "id": "9031901",
-        "name": "Unknown",
+        "name": "Raphael",
         "system": platform.system(),
         "version": platform.version(),
         "architecture": platform.architecture(),
