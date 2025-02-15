@@ -9,7 +9,7 @@ HTML_TEMPLATE = """
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>System Info</title>
+    <title>Info. about 9031901 (raphael)</title>
     <style>
         body {
             background-color: black;
@@ -23,11 +23,11 @@ HTML_TEMPLATE = """
             overflow: hidden;
         }
         .container {
-            border: 2px solid white;
-            padding: 10px;
+            border: 4px solid white;
+            padding: 3px;
             text-align: left;
             max-width: 90vw;
-            max-height: 90vh;
+            max-height: 60vh;
             overflow: auto;
             white-space: pre-wrap;
             word-wrap: break-word;
